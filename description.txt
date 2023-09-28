@@ -95,6 +95,25 @@ end
 function 2dhsnt_tran()
 	2d transfer 5+!h
 		2h automat
+			2s 8-9, inwit na 5!h-4!s
+			2nt 5!h, inwit do 3Ba/4!h
+			3c GF, nie obiecuje !c, może zawierać 6!h
+				3d przejściowe, brak 3!h
+					3h 6!h
+					3nt 5!h4!c
+					4c 5!h5!c, uzgadnia !c
+				3h 3!h, uzgadnia !h
+			3d GF, 5!h4+!d
+				3h 3!h, uzgadnia !h
+				3s cuebid !s, uzgadnia !d
+				3nt do gry
+				4c cuebid !c, uzgadnia !d
+			3h 6!h, inwit
+			3s 6!h1!s
+			3nt 5!h, zostaw lub popraw na 4!h
+			4c 6!h1!c
+			4d 6!h1!d
+			4h 6!h lepsze niż bezpośredni transfer 4!d
 		2s 4!h, 4!s góra otwarcia
 		2nt 3-4!h, góra otwarcia ręka nadająca się do bardziej do Ba
 		3c 4!h, 4!c góra otwarcia
@@ -108,6 +127,32 @@ function 2dhsnt_tran()
 			2h 3-4!h
 	2h transfer 5+!s
 		2s automat
+			2nt 5!s, inwit do 3Ba/4!s
+			3c GF, nie obiecuje !c, może zawierać 6!s
+				3d przejściowe, mam coś w !d, brak 3!s
+					3s 6!s
+					3nt 5!s4!c
+					4c 5!s5!c, uzgadnia !c
+				3h przejściowe, mam coś w !h, brak 3!s
+					3s 6!s
+					3nt 5!s4!c
+					4c 5!s5!c, uzgadnia !c
+				3s 3!s, uzgadnia !s
+			3d GF, 5!s4+!d
+				3h cuebid !h, uzgadnia !d
+				3s 3!s, uzgadnia !s
+				3nt do gry
+				4c cuebid !c, uzgadnia !d
+			3h GF, 5!s5!h
+				3s 3!s, uzgadnia !s
+				3nt 3!h, uzgadnia !h, prosi o cuebid !c
+				4c 3!h, uzgadnia !h, cuebid !c
+				4d 3!h, uzgadnia !h, cuebid !d
+			3s 6!s, inwit
+			3nt 5!s, zostaw lub popraw na 4!s
+			4c 6!s1!c
+			4d 6!s1!d
+			4h 6!s1!h
 		2nt 3-4!s, góra otwarcia ręka nadająca się do bardziej do Ba
 		3c 4!s, 4!c góra otwarcia
 		3d 4!s, 4!d góra otwarcia

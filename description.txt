@@ -114,11 +114,20 @@ function 2dhsnt_tran()
 			4c 6!h1!c
 			4d 6!h1!d
 			4h 6!h lepsze niż bezpośredni transfer 4!d
-		2s 4!h, 4!s góra otwarcia
-		2nt 3-4!h, góra otwarcia ręka nadająca się do bardziej do Ba
-		3c 4!h, 4!c góra otwarcia
-		3d 4!h, 4!d góra otwarcia
-		3h 4!h, góra otwarcia ręka nadająca się do bardziej !h
+		2s 4!h, 2!s
+			2nt pytanie o siłe
+				3c dół
+				3d góra
+			3d powtórny transfer
+		2nt 4!h, 2!d
+			3c pytanie o siłe
+				3d dół
+				3h góra
+			3d powtórny transfer
+		3c 4!h, 2!c dół
+			3d powtórny transfer
+		3d brak ustaleń
+		3h 4!h, 2!c góra
 		(x)
 			xx to mój kolor, propozycja gry
 			pass bez fitu 2!h
@@ -153,11 +162,20 @@ function 2dhsnt_tran()
 			4c 6!s1!c
 			4d 6!s1!d
 			4h 6!s1!h
-		2nt 3-4!s, góra otwarcia ręka nadająca się do bardziej do Ba
-		3c 4!s, 4!c góra otwarcia
-		3d 4!s, 4!d góra otwarcia
-		3h 4!h, 4!s góra otwarcia
-		3s 4!s, góra otwarcia ręka nadająca się do bardziej !s
+		2nt 4!s, 2!h
+			3c pytanie o siłe
+				3d dół
+				3h góra
+			3h powtórny transfer
+		3c 4!s, 2!c
+			3d pytanie o siłe
+				3h dół
+				3s góra
+			3h powtórny transfer
+		3d 4!s, 2!d dół
+			3h powtórny transfer
+		3h brak ustaleń
+		3s 4!s, 2!d góra
 		(x)
 			xx to mój kolor, propozycja gry
 			pass bez fitu 2!s
@@ -579,7 +597,7 @@ end
 					:amer_after_h_next(GF ustalenie !d)
 				3h 5!d3!h32
 					:amer_after_h_next(GF ustalenie !d)
-		2s 15-17 4!s
+		2s 15-17 6+!d3!h
 		2nt 15-17 6+!d z trzymaniem !c i !s
 	:1s_resp()
 		:1nt_resp(12-14)

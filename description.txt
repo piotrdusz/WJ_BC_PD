@@ -116,13 +116,14 @@ function 2dhsnt_tran()
 			4h 6!h lepsze niż bezpośredni transfer 4!d
 		2s 4!h, 2!s
 			2nt pytanie o siłe
-				3c dół
-				3d góra
+				3c góra, cuebid !c
+				3d góra, cuebid !d
+				3h dół
 			3d powtórny transfer
 		2nt 4!h, 2!d
 			3c pytanie o siłe
-				3d dół
-				3h góra
+				3d góra, cuebid !d
+				3h dół
 			3d powtórny transfer
 		3c 4!h, 2!c dół
 			3d powtórny transfer
@@ -164,13 +165,14 @@ function 2dhsnt_tran()
 			4h 6!s1!h
 		2nt 4!s, 2!h
 			3c pytanie o siłe
-				3d dół
-				3h góra
+				3d góra, cuebid !d
+				3h góra, cuebid !h
+				3s dół
 			3h powtórny transfer
 		3c 4!s, 2!c
 			3d pytanie o siłe
-				3h dół
-				3s góra
+				3h góra, cuebid !h
+				3s dół
 			3h powtórny transfer
 		3d 4!s, 2!d dół
 			3h powtórny transfer

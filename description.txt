@@ -1017,10 +1017,10 @@ end
 	2h do gry
 	2s do gry
 	2nt pytanie o skład
-		3c 5!h-4!s dół
-		3d 5!s-4!h dół
-		3h 6!h-4!s dół 5!h-4!s góra
-		3s 6!s-4!h dół 5!s-4!h góra
+		3c 5!h-4!s
+		3d 5!s-4!h
+		3h 6!h-4!s
+		3s 6!s-4!h
 		3nt 5!h-5!s (6-6)
 			4c uzgodnienie !h sprawdzam krótkość
 				4d krótkość !d
@@ -1037,8 +1037,8 @@ end
 				5d renons !d
 			4h do gry
 			4s do gry
-		4c 6!h-5!s dół 6!h-4!s góra
-		4d 6!s-5!h dół 6!s-4!h góra
+		4c 6!h-5!s
+		4d 6!s-5!h
 		4h 6!h-5!s góra nie chciałem 1!s
 	(x)
 		Pass Propozycja gry naturalne kara

@@ -73,19 +73,19 @@ function 3s_fit()
 		4h trzecia figura !s
 end
 
-function 1h_some_resp(2h, 2s, 3d, club_num)
+function 1h_some_resp(2h, 2s, 2nt, 3d, club_num)
 	2h $(2h)
 	2s $(2s)
-	2nt 15-17, 5332
+	2nt 15-17, $(2nt)
 	3c 15-17, $(club_num)+!c
 	3d $(3d)
 	3h 15-17, 6+!h
 end
 
-function 1s_some_resp(2s, 3d, club_num)
+function 1s_some_resp(2s, 3d, 2nt, club_num)
 	2h 1) 12-14, 4+!h 2) 15-17, 4!h
 	2s $(2s)
-	2nt 15-17, 5332
+	2nt 15-17, $(2nt)
 	3c 15-17, $(club_num)+!c
 	3d $(3d)
 	3h 15-17, 5+!h
@@ -638,26 +638,26 @@ end
 	:3c_resp(9-11)
 	(1ba)
 		2c 4+4+!h!s
-1h 12-17, 5+!h
+1h 1) 12-17, 5+!h 2) 7-11 5+!h5+!c/!d
 	:1s_resp()
 		:1nt_resp(12-14)
 			2c 1)transfer na 2!d 2)dowolny ivit
 				2d automat
 			2d dowolny GF
-		2c 1) 12-14, 4+!c 2) 15-17, 4!c
+		2c 1) 12-14, 4+!c 2) 15-17, 4!c 3) 7-11, 5+!c
 			2d czwarty kolor inwit
-		2d 1) 12-14, 4+!d 2) 15-17, 4!d
-		:1h_some_resp(12-14; 6+!h, 12-14; 4!s, 15-17; 5+!d, 5)
+		2d 1) 12-14, 4+!d 2) 15-17, 4!d 3) 7-11, 5+!d
+		:1h_some_resp(12-14; 6+!h, 12-14; 4!s, 5332, 15-17; 5+!d, 5)
 		3s 15-17, 4!s
 	:1nt_resp(7-11)
-		2c 1) 12-14, 4+!c 2) 15-17, 4!c
-		2d 1) 12-14, 4+!d 2) 15-17, 4!d
-		:1h_some_resp(12-14; 6+!h, 15-17; 4!s, 15-17; 5+!d, 5)
+		2c 1) 12-14, 4+!c 2) 15-17, 4!c 3) 7-11, 5+!c
+		2d 1) 12-14, 4+!d 2) 15-17, 4!d 3) 7-11, 5+!d
+		:1h_some_resp(12-14; 6+!h, 15-17; 4!s, 5332, 15-17; 5+!d, 5)
 	2c GF, 5+!c/dowolny
-		2d 1) 12-14, 4+!d 2) 15-17, 4!d
-		:1h_some_resp(pozostałe, 15-17; 4!s, 15-17; 5+!d, 4)
+		2d 1) 12-14, 4+!d 2) 15-17, 4!d 3) 7-11, 5+!d
+		:1h_some_resp(pozostałe, 15-17; 4!s, 5332, 15-17; 5+!d, 4)
 	2d GF, 5+!d
-		:1h_some_resp(pozostałe, 15-17; 4!s, 3+!d; nic innego do pokazania, 4)
+		:1h_some_resp(pozostałe, 15-17; 4!s, 5332 lub 5!h4!c, 12-14 3+!d, 5)
 	2h 7-9, 3+!h
 	2s inwit z singlem 4+!h
 		2nt pytanie o singla
@@ -679,22 +679,22 @@ end
 	4h blokujące
 	(x)
 		:1nt_fit(h)
-1s 12-17, 5+!s
+1s 1) 12-17, 5+!s 2) 7-11 5+!s5+!c/!d
 	1nt F1 7-11 bez fitu pik
 		2c 1) 4+!c 2) 12-14, 5332
-		2d 1) 12-14, 4+!d 2) 15-17, 4!d
-		:1s_some_resp(12-14; 6+!s, 15-17; 5+!d, 5)
+		2d 1) 12-14, 4+!d 2) 15-17, 4!d 3) 7-11 5+!d
+		:1s_some_resp(12-14; 6+!s, 15-17; 5+!d, 5332, 5)
 	2c GF 5+!c/dowolny
-		2d 1) 12-14, 4+!d 2) 15-17, 4!d
-		:1s_some_resp(pozostałe, 15-17; 5+!d, 4)
+		2d 1) 12-14, 4+!d 2) 15-17, 4!d 3) 7-11 5+!d
+		:1s_some_resp(pozostałe, 15-17; 5+!d, 5332, 4)
 	2d GF 5+!d
-		:1s_some_resp(pozostałe, 3+!d; nic innego do pokazania, 4)
+		:1s_some_resp(pozostałe, 12-14 3+!d, 5332 lub 5!s4!c, 5)
 	2h GF 5+!h
 		2s pozostałe
-		2nt 15-17, 5332
-		3c 15-17, 4+!c
-		3d 15-17, 4+!d
-		3h 3+!h; nic innego do pokazania
+		2nt 15-17, 5332 lub 5!s4!c lub 5!s4!d
+		3c 15-17, 5+!c
+		3d 15-17, 5+!d
+		3h 12-14, 3+!h
 		3s 15-17, 6+!s
 	2s 7-9 3+!s
 	2nt inwit z singlem 4+!s

@@ -18,12 +18,16 @@ end
 	2h 7-9, 5!s4-5!h
 		pass do gry
 		2s do gry
-		2nt 1) GF z fitem 2) chęć gry 3!c
-			3c automat
+		2nt 1) GF z fitem 2) 15-17, 6+!c
+			3c niemalże automat
 				pass 6+!c
 				3d 4!h, 3!s wybierz, który kolor gramy
 				3h 4+!h
 				3s 3+!s
+			3d maksimum, pytanie o trzymanie !d
+			3h maksimum, 5!s5!h
+			3s maksimum, trzymanie !d, ale lepiej grać z drugiej ręki
+			3nt maksimum, trzymanie !d i lepiej grać z tej ręki
 		:3c_fit()
 		:3d_fit()
 		3h inwit

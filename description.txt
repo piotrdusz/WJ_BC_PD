@@ -29,7 +29,26 @@ end
 		3h inwit
 		3s inwit
 		3nt do gry
-		4c w sumie nie wiem, ostatnio licytowałem jako jakiś cuebid, ale w sumie nie wiem, czy ma to sens... Jakieś propozycje?
+		4c w sumie nie wiem, ostatnio licytowałem jako jakiś cuebid, ale w sumie nie wiem, czy ma to sens... Jak dla mnie odpowiedzi mogą się kończyć na 3NT, ale jestem otwarty na dyskusje. Jakieś propozycje?
 		4d jak wyżej
 1d 1) 12-17, 5+!d 2) 12-17, trójkolorówka 3) 12-14, 5!c4+!d
 	2h 7-9, 5!s4-5!h
+		pass do gry
+		2s do gry
+		2nt 1) GF z fitem 2) 12-14, 5+!c5+!d 3) 12-14, 6+!d
+			3c lepsze !c niż !d
+				pass 5+!d
+				3d 6+!d
+				3h 4+!h
+				3s 3+!h
+			3d lepsze !d niż !c
+				pass 6+!d
+				3h 4+!h
+				3s 3+!h
+		3c 15-17, 5+!c5+!d
+		3d 15-17, 6+!d
+		3h inwit
+		3s inwit
+		3nt do gry
+		4c w sumie nie wiem, ostatnio licytowałem jako jakiś cuebid, ale w sumie nie wiem, czy ma to sens... Jak dla mnie odpowiedzi mogą się kończyć na 3NT, ale jestem otwarty na dyskusje. Jakieś propozycje?
+		4d jak wyżej

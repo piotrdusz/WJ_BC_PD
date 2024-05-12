@@ -37,14 +37,14 @@ end
 		2s do gry
 		2nt 1) GF z fitem 2) 12-14, 5+!c5+!d 3) 12-14, 6+!d
 			3c lepsze !c niż !d
-				pass 5+!d
+				pass 5+!c
 				3d 6+!d
 				3h 4+!h
-				3s 3+!h
+				3s 3+!s
 			3d lepsze !d niż !c
-				pass 6+!d
+				pass wariant 2) lub 3)
 				3h 4+!h
-				3s 3+!h
+				3s 3+!s
 		3c 15-17, 5+!c5+!d
 		3d 15-17, 6+!d
 		3h inwit

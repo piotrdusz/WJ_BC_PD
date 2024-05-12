@@ -16,8 +16,14 @@ end
 
 1c 1) 12-14, zrównoważony 2) 12-14, 4!s4!h1!d4!c 3) 15+, 5+!c 4) 18+
 	2h 7-9, 5!s4-5!h
-		2s di gry
-		2nt 1) 15-17, 6+!c 2) GF z fitem
+		pass do gry
+		2s do gry
+		2nt 1) GF z fitem 2) chęć gry 3!c
+			3c automat
+				pass 6+!c
+				3d 4!h, 3!s wybierz, który kolor gramy
+				3h 4+!h
+				3s 3+!s
 		:3c_fit()
 		:3d_fit()
 		3h inwit

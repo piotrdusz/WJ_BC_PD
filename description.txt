@@ -62,3 +62,17 @@ end
 		3nt do gry
 		4c 4+!h0-1!s
 		4d 3+!s0-1!h
+		
+{dwustronna przed pasem partnera}
+	(2d) 6+!h/!s lub Wilkosz
+		2nt 16-18, zrównoważony
+			3c Stayman
+				3d brak starszej czwórki
+				3h 4!h
+				3s 4!s
+			3d transfer 5+!h
+			3h transfer 5+!s
+			3s układ na kolorach młodszych
+			3nt do gry
+			4c naturalne, intencje szlemikowe
+			4d naturalne, intencje szlemikowe

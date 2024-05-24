@@ -20,7 +20,7 @@ end
 		2s do gry
 		2nt GF, pytanie o skład
 			3c 5!s4!h3-4!c
-				3d jakieś sugestie?
+				3d uzgodnienie !c
 				3h uzgodnienie !h
 				3s uzgodnienie !s
 				3nt do gry

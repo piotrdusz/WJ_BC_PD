@@ -1,4 +1,4 @@
-function 1nt_defence
+function 1nt_defence()
 	2c
 	2d
 	2h

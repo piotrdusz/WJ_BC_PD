@@ -1,0 +1,10 @@
+function 1nt_defence
+	2c
+	2d
+	2h
+	2s
+	2nt
+end
+
+1nt 15-17, zrównoważony
+	:1nt_defence()

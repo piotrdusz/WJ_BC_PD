@@ -497,7 +497,7 @@ end
 			2h obawa o piki dół
 			2s obawa o kiery dół
 			2nt około 4333 dół
-			3c 7-8 3-5!c
+			3c 7-8, 3-5!c
 			3d góra 5!d332
 			3h obawa o piki góra
 			3s obawa o kiery góra	

@@ -1,16 +1,20 @@
 function 1nt_defence()
 	(2c) 5+4+!h!s
-		x PROPOZYCJE: A) karna z !c B) 8-9 punktów C) karna na jeden starszy
+		x 1) 8+, skład w miarę dowolny 2) słabe na !c
+			({2!h/!s}) wybór koloru
+				{dbl/pass}
+					2nt słabe na !c
+						3c automat
+					3c lepsze na !c
 		2d nieforsujące na !d
 		2h nieforsujące na !h
 		2s nieforsujące na !s
-		2nt PROPOZYCJE: A) inwit do 3NT z (pół)zatrzymaniami B) transfer na !c C) na obydwu młodych
+		2nt na młodych
 		3c GF, 5+!c
 		3d GF, 5+!d
 		3h GF, 5!h
 		3s GF, 5!s
 		3nt do gry
-		4c ?
 		4d transfer na 4!h
 		4h transfer na 4!s
 	({2!c}) naturalne lub dwukolorowe z !c
@@ -24,45 +28,42 @@ function 1nt_defence()
 		3h GF, 5!h
 		3s GF, 5!s
 		3nt do gry z zatrzymaniem !c
-		4c ?
 		4d transfer na 4!h
 		4h transfer na 4!s
 	(2d) 6+!h/!s
-		x PROPOZYCJE: A) karna z !d B) 8-9 punktów C) wywoławcza do !s
+		pass forsuje do kontry, jeśli przeciwnik spasuje
+		x wywoławcza do !s
 		2h nieforsujące na !h
 		2s nieforsujące na !s
-		2nt PROPOZYCJE A) inwit do 3NT z (pół)zatrzymaniami B) lebesohl C) na obydwu młodych
-			3c automat (jeśli 2NT to lebesohl)
+		2nt lebensohl
+			3c automat
 				pass SO na !c
 				3d SO na !d
-				3h GF, 4!h
-				3s GF, 4!s
-				3nt ?
+				3h 5+!h, inwit
+				3s 5+!s, inwit
 		3c GF, 5+!c
 		3d GF, 5+!d
 		3h GF, 5!h
 		3s GF, 5!s
 		3nt do gry
-		4c ?
 		4d transfer na 4!h
 		4h transfer na 4!s
 	({2!d}) naturalne lub dwukolorowe z !d
 		x negatywna
 		2h nieforsujące na !h
 		2s nieforsujące na !s
-		2nt inwit do 3NT z zatrzymaniem !d
+		2nt ?
 		3c GF, 5+!c
 		3d GF, brak trzymania !d, brak piątki
 		3h GF, 5!h
 		3s GF, 5!s
 		3nt do gry z zatrzymaniem !d
-		4c ?
 		4d transfer na 4!h
 		4h transfer na 4!s
 	(2h) naturalne lub 5!h4+!c/!d
 		x 8-9, 4!s
 		2s nieforsujące na !s
-		2nt lebesohl
+		2nt lebensohl
 			3c automat
 				pass SO na !c
 				3d SO na !d
@@ -74,12 +75,10 @@ function 1nt_defence()
 		3h GF, brak trzymania !h, brak piątki
 		3s GF, 5!s
 		3nt do gry z zatrzymaniem !h
-		4c ?
-		4d ?
 		4h transfer na 4!s
 	(2s) naturalne lub 5!s4+!c/!d
 		x 8-9, 4!h
-		2nt lebesohl
+		2nt lebensohl
 			3c automat
 				pass SO na !c
 				3d SO na !d
@@ -91,7 +90,6 @@ function 1nt_defence()
 		3h GF, 5!h
 		3s GF, brak trzymania !s, brak piątki
 		3nt do gry z zatrzymaniem !s
-		4c ?
 		4d transfer na 4!h
 	(2nt) na młodych
 		x karna na co najmniej jeden młody
@@ -100,7 +98,6 @@ function 1nt_defence()
 		3h GF, 5!h
 		3s GF, 5!s
 		3nt do gry
-		4c ?
 		4d transfer na 4!h
 		4h transfer na 4!s
 end

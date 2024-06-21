@@ -52,7 +52,11 @@ function 1nt_defence()
 		x negatywna
 		2h nieforsujące na !h
 		2s nieforsujące na !s
-		2nt ?
+		2nt lebensohl
+			3c automat
+				pass SO na !c
+				3h 5+!h, inwit
+				3s 5+!s, inwit
 		3c GF, 5+!c
 		3d GF, brak trzymania !d, brak piątki
 		3h GF, 5!h

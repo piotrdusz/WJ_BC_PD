@@ -871,10 +871,10 @@ end
 	(x)
 		:1nt_fit(s)
 1nt 15-17, zrównoważony
-	2c 1)8+ 4!h/!s 2)0-7 4+5+!h!s
+	2c 1) 8+ 4!h/!s 2) 0-7 4+5+!h!s
 		2d brak starszej czwórki
-			2h 0-7, 5-4 na starszych
-			2s 8-9, inwit na 5!s-4!h
+			2h PRZED PASEM: 0-7, 5-4 na starszych | PO PASIE: SO 5!h4!s
+			2s PRZED PASEM: 8-9, inwit na 5!s-4!h | PO PASIE: SO 5!s4!h
 			2nt inwit
 			3c GF, 5+!c
 			3d GF, 5+!d

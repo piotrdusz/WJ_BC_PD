@@ -788,6 +788,8 @@ end
 					:amer_after_h_next(GF ustalenie !d)
 		2s 15-17 6+!d3!h
 		2nt 15-17 6+!d z trzymaniem !c i !s
+		3c 15-17, 5+!d5+1c
+		3d 15-17 6+!d bez trzymania zarówno w !c jak i w !s
 	:1s_resp()
 		:1nt_resp(12-14)
 			2c 1)transfer na 2!d 2)dowolny ivit
@@ -816,6 +818,8 @@ end
 		2h 15-17, 4!h
 		2s 15-17, 4!s
 		2nt 15-17 6+!d
+		3c 15-17, 5+!d5+1c
+		3d 15-17 6+!d bez trzymania zarówno w !c jak i w !s
 	2c GF 5+!c/dowolny
 	2d GF 4+!d
 		2h 12-14 skład dowolny

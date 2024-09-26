@@ -61,7 +61,7 @@ function 3d_fit()
 		4c trzecia figura !d
 end
 
-1s 1) 12-17, 5+!s 2) 7-11 5+!s5+!c/!d
+1s 1) 12-17, 5+!s 2) 8-11 5+!s5+!c/!d
 	1nt 7-11 bez fitu !s
 		:gazilli_1s()
 		2d 1) 12-14, 4+!d 2) 15-17, 4!d 3) 7-11 5+!d

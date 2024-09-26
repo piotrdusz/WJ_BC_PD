@@ -788,8 +788,8 @@ end
 					:amer_after_h_next(GF ustalenie !d)
 		2s 15-17 6+!d3!h
 		2nt 15-17 6+!d z trzymaniem !c i !s
-		3c 15-17, 5+!d5+1c
-		3d 15-17 6+!d bez trzymania zarówno w !c jak i w !s
+		3c 15-17, 5+!d5+!c
+		3d 15-17 6+!d bez trzymania obydwu !c i !s
 	:1s_resp()
 		:1nt_resp(12-14)
 			2c 1)transfer na 2!d 2)dowolny ivit
@@ -812,15 +812,17 @@ end
 				3s 5!d3!s32
 					:amer_after_s_next(GF ustalenie !d)
 		2nt 15-17 6+!d z trzymaniem !c i !h
+		3c 15-17, 5+!d5+!c
+		3d 15-17 6+!d bez trzymania obydwu !c i !h
 	:1nt_resp(7-10)
 		2c 1)12-14 5-4+!c!d 2)15-17 5!d4!c
 		2d 12-14 6+!d
 		2h 15-17, 4!h
 		2s 15-17, 4!s
 		2nt 15-17 6+!d
-		3c 15-17, 5+!d5+1c
-		3d 15-17 6+!d bez trzymania zarówno w !c jak i w !s
+		3c 15-17, 5+!d5+!c
 	2c GF 5+!c/dowolny
+		2h 12-14 skład dowolny
 	2d GF 4+!d
 		2h 12-14 skład dowolny
 	2h 7-9, 5!s4-5!h

@@ -1,20 +1,52 @@
 function drury(kolor)
-	2c 10+, pytanie o siłe otwarcia/wejścia
+	2c 3+!$(kolor), 10+, pytanie o siłe otwarcia/wejścia
 		2d 12-14 nie konkretyzuje składu
 		2$(kolor) podlimitowe otwarcie
 end
 
+function wej_kier(2diamond, 3diamond)
+	1h 5+!h, 8+
+		1s 4+!s, 7+
+		1nt 0-3!h, 7+
+		:drury(h)
+		2d $(2diamond)
+		2h 3+!h, 7-9
+		2s Jakieś pomysły?
+		2nt brak fitu, inwit do 3nt
+		3c 6+!c, inwit do 3nt
+		3d $(3diamond)
+		3h blokujące
+		3s splinter !s
+		3nt do gry
+		4c splinter !c
+		4d splinter !d
+end
+
+function wej_pik(2diamond, 2heart, 3diamond)
+	1s 5+!s, 8+
+		1nt 0-3!s, 7+
+		:drury(s)
+		2d $(2diamond)
+		2h $(2heart)
+		2s 3+!s, 7-9
+		2nt brak fitu, inwit do 3nt
+		3c 6+!c, inwit do 3nt
+		3d $(3diamond)
+		3h A to?
+		3s blokujące
+		3nt do gry
+		4c splinter !c
+		4d splinter !d
+		4h splinter !h
+end
+
 {dwustronna przed pasem partnera}
 	(1c)
-		1h 5+!h, 8+
-			:drury(h)
-		1s 5+!s, 8+
-			:drury(s)
+		:wej_kier(5+!d 12+ F1, 6+!d inwit do 3nt)
+		:wej_pik(5+!d 12+ F1, 5+!h; W jakiej sile?; Forsuje?, 6+!d inwit do 3nt)
 	(1d)
-		1h 5+!h, 8+
-			:drury(h)
-		1s 5+!s, 8+
-			:drury(s)
+		:wej_kier(GF bez fitu; pytanie o trzymanie, Jakieś pomysły?)
+		:wej_pik(GF bez fitu; pytanie o trzymanie, 5+!h; W jakiej sile?; Forsuje?, Jakieś pomysły?)
 	(1h)
-		1s 5+!s, 8+
-			:drury(s)
+		:wej_pik(5+!d 12+ F1, GF bez fitu; pytanie o trzymanie?, 6+!d inwit do 3nt)
+

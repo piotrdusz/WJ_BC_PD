@@ -11,7 +11,7 @@ function wej_kier(2diamond, 3diamond)
 		:drury(h)
 		2d $(2diamond)
 		2h 3+!h, 7-9
-		2s Jakieś pomysły?
+		2s 4+!h, inwit z krótkością
 		2nt brak fitu, inwit do 3nt
 		3c 6+!c, inwit do 3nt
 		3d $(3diamond)
@@ -22,17 +22,17 @@ function wej_kier(2diamond, 3diamond)
 		4d splinter !d
 end
 
-function wej_pik(2diamond, 2heart, 3diamond)
+function wej_pik(2diamond, 2heart, 3diamond, 3heart)
 	1s 5+!s, 8+
 		1nt 0-3!s, 7+
 		:drury(s)
 		2d $(2diamond)
 		2h $(2heart)
 		2s 3+!s, 7-9
-		2nt brak fitu, inwit do 3nt
+		2nt 4+!s, inwit z krótkością
 		3c 6+!c, inwit do 3nt
 		3d $(3diamond)
-		3h A to?
+		3h $(3heart)
 		3s blokujące
 		3nt do gry
 		4c splinter !c
@@ -43,10 +43,10 @@ end
 {dwustronna przed pasem partnera}
 	(1c)
 		:wej_kier(5+!d 12+ F1, 6+!d inwit do 3nt)
-		:wej_pik(5+!d 12+ F1, 5+!h; W jakiej sile?; Forsuje?, 6+!d inwit do 3nt)
+		:wej_pik(5+!d 12+ F1, 5+!h 12+ F1, 6+!d inwit do 3nt, 6+!h inwit)
 	(1d)
-		:wej_kier(GF bez fitu; pytanie o trzymanie, Jakieś pomysły?)
-		:wej_pik(GF bez fitu; pytanie o trzymanie, 5+!h; W jakiej sile?; Forsuje?, Jakieś pomysły?)
+		:wej_kier(GF bez fitu; pytanie o trzymanie, chcę grać 3!h)
+		:wej_pik(GF bez fitu; pytanie o trzymanie, 5+!h 12+ F1, chcę grać 3!s, 6+!h inwit)
 	(1h)
-		:wej_pik(5+!d 12+ F1, GF bez fitu; pytanie o trzymanie?, 6+!d inwit do 3nt)
+		:wej_pik(5+!d 12+ F1, GF bez fitu; pytanie o trzymanie, 6+!d inwit do 3nt, chcę grać 3!s)
 

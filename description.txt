@@ -1,3 +1,88 @@
+function gazilli_1s()
+	2c F1, 15+ różne układy lub !c
+		2d pytanie, niekoniecznie GF
+			2h 15-17, 4!h
+			2s 1) 7-13 5+!s5+!c 2) 12-14 5!s4!c
+			2nt 15-17, 4!c
+			3c 13-14, 5+!s5+!c
+			3d 15-17, 6!s4!d
+			3h 15-17, 6!s4!h
+			3s 15-17, 6!s4!c
+			3nt 6+!s, zupełne maksimum
+		2h 5+!h, nie przyjmuję inwitu
+		2s 2!s, nie przyjmuję inwitu
+		2nt dowolna słaba dwukolorówka 5+5+ z maksymalnie singlem !s
+			3c pasuj lub popraw
+				pass 5+!c
+				3d 5+!d5+!h
+			3d pasuj lub popraw
+				pass 5+!d
+				3h 5+!c5+!h
+			3h 3!h, 7(6)+!s
+				pass 5+!h
+				3s 5+!c5+!d
+			3s 7+!s
+			3nt zupełne maksimum, propozycja
+				pass no to gram
+				4c 5+!c5+!d, nie chcę grać 3nt
+				4d 5+!d5+!h, nie chcę grać 3nt
+				4h 5+!h5+!c, nie chcę grać 3nt
+		3c SO na !c
+		3d SO na !d
+end
+
+function major_agree()
+	3h pasuj z minimum, licytuj z maksimum
+	3s pasuj z minimum, licytuj z maksimum
+	3nt do gry
+	4c szlemikowe uzgodnienie !h
+	4d szlemikowe uzgodnienie !s
+	:major_to_play()
+end
+
+function major_to_play()
+	4h do gry
+	4s do gry
+end
+
+function 1nt_resp(strength)
+	1nt $(strength), zrównoważony
+end
+
+function 1s_resp()
+	1s 7+, 4+!s
+end
+
+function 1h_resp()
+	1h 7+, 4+!h
+end
+
+function 3c_resp(strength)
+	3c $(strength), 6+!c inwit
+end
+
+function 3d_resp(strength)
+	3d $(strength), 6+!d inwit
+end
+
+function 2d_odw(kolor, kol_sin_1, kol_sin_2, 3_kier, 3_pik)
+	2d 18+ 3+$(kolor)
+		2h 12+ skład dowolny
+			2s ustalenie koloru, pytanie o skład
+				2nt singiel
+					3c pytanie o singla
+						3d singiel !d
+						3h singiel $(kol_sin_1)
+						3s singiel $(kol_sin_2)
+				3c 4+$(kolor)4+!c
+				3d 4+$(kolor)4+!d
+				3h $(3_kier)
+				3s $(3_pik)
+				3nt 4$(kolor)333
+				4c 5+$(kolor)5+!c, dwie krótkości
+				4d 5+$(kolor)5+!d, dwie krótkości
+end
+
 function drury(kolor)
 	2c 3+!$(kolor), 10+, pytanie o siłe otwarcia/wejścia
 		2d 12-14 nie konkretyzuje składu
@@ -39,14 +124,1452 @@ function wej_pik(2diamond, 2heart, 3diamond, 3heart)
 		4d splinter !d
 		4h splinter !h
 end
+function 3c_fit()
+	3c GF, pytanie o fit w !c
+		3d dwie blotki !c
+		3h trzy blotki !c lub druga figura !c
+		3s trzecia figura !c
+		3nt 0-1!c
+end
 
+function 3d_fit()
+	3d GF, pytanie o fit w !d
+		3h dwie blotki !d
+		3s trzy blotki !d lub druga figura !d
+		3nt 0-1!d
+		4c trzecia figura !d
+end
+
+function 3h_fit()
+	3h GF, pytanie o fit w !h
+		3s dwie blotki !h
+		3nt 0-1!h
+		4c trzy blotki !h lub druga figura !h
+		4d trzecia figura !h
+end
+
+function 3s_fit()
+	3s GF, pytanie o fit w !s
+		3nt 0-1!s
+		4c dwie blotki !s
+		4d trzy blotki !s lub druga figura !s
+		4h trzecia figura !s
+end
+
+function 1h_some_resp(2h, 2s, 2nt, 3d, club_num)
+	2h $(2h)
+	2s $(2s)
+	2nt 15-17, $(2nt)
+	3c 15-17, $(club_num)+!c
+	3d $(3d)
+	3h 15-17, 6+!h
+end
+
+function 1s_some_resp(2s, 3d, 2nt, club_num)
+	2h 1) 12-14, 4+!h 2) 15-17, 4!h
+	2s $(2s)
+	2nt 15-17, $(2nt)
+	3c 15-17, $(club_num)+!c
+	3d $(3d)
+	3h 15-17, 5+!h
+	3s 15-17, 6+!s
+end
+
+function 2dhsnt_tran()
+	2d transfer 5+!h
+		2h automat
+			2s 8-9, inwit na 5!h-4!s
+			2nt 5!h, inwit do 3Ba/4!h
+			3c GF, nie obiecuje !c, może zawierać 6!h
+				3d przejściowe, brak 3!h
+					3h 6!h
+					3nt 5!h4!c
+					4c 5!h5!c, uzgadnia !c
+				3h 3!h, uzgadnia !h
+			3d GF, 5!h4+!d
+				3h 3!h, uzgadnia !h
+				3s cuebid !s, uzgadnia !d
+				3nt do gry
+				4c cuebid !c, uzgadnia !d
+			3h 6!h, inwit
+			3s 6!h1!s
+			3nt 5!h, zostaw lub popraw na 4!h
+			4c 6!h1!c
+			4d 6!h1!d
+			4h 6!h lepsze niż bezpośredni transfer 4!d
+		2s 4!h, 2!s
+			2nt pytanie o siłe
+				3c góra, cuebid !c
+				3d góra, cuebid !d
+				3h dół
+			3d powtórny transfer
+		2nt 4!h, 2!d
+			3c pytanie o siłe
+				3d góra, cuebid !d
+				3h dół
+			3d powtórny transfer
+		3c 4!h, 2!c dół
+			3d powtórny transfer
+		3d brak ustaleń
+		3h 4!h, 2!c góra
+		(x)
+			xx to mój kolor, propozycja gry
+			pass bez fitu 2!h
+				xx ponowny transfer
+				3d ponowny transfer
+			2h 3-4!h
+	2h transfer 5+!s
+		2s automat
+			2nt 5!s, inwit do 3Ba/4!s
+			3c GF, nie obiecuje !c, może zawierać 6!s
+				3d przejściowe, mam coś w !d, brak 3!s
+					3s 6!s
+					3nt 5!s4!c
+					4c 5!s5!c, uzgadnia !c
+				3h przejściowe, mam coś w !h, brak 3!s
+					3s 6!s
+					3nt 5!s4!c
+					4c 5!s5!c, uzgadnia !c
+				3s 3!s, uzgadnia !s
+			3d GF, 5!s4+!d
+				3h cuebid !h, uzgadnia !d
+				3s 3!s, uzgadnia !s
+				3nt do gry
+				4c cuebid !c, uzgadnia !d
+			3h GF, 5!s5!h
+				3s 3!s, uzgadnia !s
+				3nt 3!h, uzgadnia !h, prosi o cuebid !c
+				4c 3!h, uzgadnia !h, cuebid !c
+				4d 3!h, uzgadnia !h, cuebid !d
+			3s 6!s, inwit
+			3nt 5!s, zostaw lub popraw na 4!s
+			4c 6!s1!c
+			4d 6!s1!d
+			4h 6!s1!h
+		2nt 4!s, 2!h
+			3c pytanie o siłe
+				3d góra, cuebid !d
+				3h góra, cuebid !h
+				3s dół
+			3h powtórny transfer
+		3c 4!s, 2!c
+			3d pytanie o siłe
+				3h góra, cuebid !h
+				3s dół
+			3h powtórny transfer
+		3d 4!s, 2!d dół
+			3h powtórny transfer
+		3h brak ustaleń
+		3s 4!s, 2!d góra
+		(x)
+			xx to mój kolor, propozycja gry
+			pass bez fitu 2!s
+				xx ponowny transfer
+				3h ponowny transfer
+			2s 3-4!s
+	2s 1)inwit do Ba 2)transfer 6+!c
+		2nt dół otwarcia
+		3c góra otwarcia
+		(x)
+			xx to mój kolor, propozycja gry
+			pass bez trzymania pik
+				xx ponowny transfer
+				2nt do gry
+				3c do gry, niech sobie wistuje
+			2nt dół otwarcia, zatrzymanie pik
+			3c góra otwarcia, zatrzymanie pik
+	2nt transfer 6+!d
+		3c 2 starsze figury karo, zachęta do 3nt
+		3d automat
+end
+
+function 1nt_defence()
+	(2c) 5+4+!h!s
+		x 1) 8+, skład w miarę dowolny 2) słabe na !c
+			({2!h/!s}) wybór koloru
+				{dbl/pass}
+					2nt słabe na !c
+						3c automat
+					3c lepsze na !c
+		2d nieforsujące na !d
+		2h nieforsujące na !h
+		2s nieforsujące na !s
+		2nt na młodych
+		3c GF, 5+!c
+		3d GF, 5+!d
+		3h GF, 5!h
+		3s GF, 5!s
+		3nt do gry
+		4d transfer na 4!h
+		4h transfer na 4!s
+	({2!c}) naturalne lub dwukolorowe z !c
+		x negatywna
+		2d nieforsujące na !d
+		2h nieforsujące na !h
+		2s nieforsujące na !s
+		2nt inwit do 3NT z zatrzymaniem !c
+		3c GF, brak trzymania !c, brak piątki
+		3d GF, 5+!d
+		3h GF, 5!h
+		3s GF, 5!s
+		3nt do gry z zatrzymaniem !c
+		4d transfer na 4!h
+		4h transfer na 4!s
+	(2d) 6+!h/!s
+		pass forsuje do kontry, jeśli przeciwnik spasuje
+		x wywoławcza do !s
+		2h nieforsujące na !h
+		2s nieforsujące na !s
+		2nt lebensohl
+			3c automat
+				pass SO na !c
+				3d SO na !d
+				3h 5+!h, inwit
+				3s 5+!s, inwit
+		3c GF, 5+!c
+		3d GF, 5+!d
+		3h GF, 5!h
+		3s GF, 5!s
+		3nt do gry
+		4d transfer na 4!h
+		4h transfer na 4!s
+	({2!d}) naturalne lub dwukolorowe z !d
+		x negatywna
+		2h nieforsujące na !h
+		2s nieforsujące na !s
+		2nt lebensohl
+			3c automat
+				pass SO na !c
+				3h 5+!h, inwit
+				3s 5+!s, inwit
+		3c GF, 5+!c
+		3d GF, brak trzymania !d, brak piątki
+		3h GF, 5!h
+		3s GF, 5!s
+		3nt do gry z zatrzymaniem !d
+		4d transfer na 4!h
+		4h transfer na 4!s
+	(2h) naturalne lub 5!h4+!c/!d
+		x 8-9, 4!s
+		2s nieforsujące na !s
+		2nt lebensohl
+			3c automat
+				pass SO na !c
+				3d SO na !d
+				3h GF, 4!s, brak trzymania !h
+				3s 5+!s, inwit
+				3nt GF, 4!s, trzymanie !h
+		3c GF, 5+!c
+		3d GF, 5+!d
+		3h GF, brak trzymania !h, brak piątki
+		3s GF, 5!s
+		3nt do gry z zatrzymaniem !h
+		4h transfer na 4!s
+	(2s) naturalne lub 5!s4+!c/!d
+		x 8-9, 4!h
+		2nt lebensohl
+			3c automat
+				pass SO na !c
+				3d SO na !d
+				3h SO na !h
+				3s GF, 4!h, brak trzymania !s
+				3nt GF, 4!h, trzymanie !s
+		3c GF, 5+!c
+		3d GF, 5+!d
+		3h GF, 5!h
+		3s GF, brak trzymania !s, brak piątki
+		3nt do gry z zatrzymaniem !s
+		4d transfer na 4!h
+	(2nt) na młodych
+		x karna na co najmniej jeden młody
+		3c lepsze kiery od pików min.5-4
+		3d lepsze piki od kierów min.5-4
+		3h GF, 5!h
+		3s GF, 5!s
+		3nt do gry
+		4d transfer na 4!h
+		4h transfer na 4!s
+end
+
+function 4c_Gerber()
+	4c Gerber
+		4d 0-4 asy
+		4h 1 as
+		4s 2 asy
+		4nt 3 asy
+end
+
+function amer_after_h_next(4d)
+	3s GF ustalenie !h
+	3nt do gry
+	4c GF ustalenie !c
+	4d $(4d)
+	4h do gry
+	4s wyłączeniowy na !s
+	4nt inwit do szlemika
+	5c wyłączeniowy na !c
+	5d wyłączeniowy na !d
+end
+
+function amer_after_s_next(4d)
+	3nt do gry
+	4c GF ustalenie !c
+	4d $(4d)
+	4h GF ustalenie !s
+	4s do gry
+	4nt inwit do szlemika
+	5c wyłączeniowy na !c
+	5d wyłączeniowy na !d
+	5h wyłączeniowy na !h
+end
+
+function max_singiel(kolor)
+	3nt 0-1$(kolor)
+end
+
+function r_blok(kntr)
+	$(kntr) 0-14 do gry z najdłuższego koloru (rozchwiany blok)
+end
+
+function 1h_wej(nt)
+	:wej_pik(5+!d 12+ F1, GF bez fitu; pytanie o trzymanie, 6+!d inwit do 3nt, chcę grać 3!s)
+	1nt $(nt)-17 trzymanie !h
+		(x)
+			xx 5+!c
+		2c 5+!d
+		2d :4!s
+		2h :5+!s
+		2s 6+!c
+		2nt 8-9 zrównoważony
+	2h 5!s-5!c/!d
+	2nt 5!c-5!d
+end
+
+function 1s_wej(nt)
+	1nt $(nt)-17 trzymanie !s
+		(x)
+			xx 5+!c
+		2c 5+!d
+		2d 5+!h
+		2h 4!h
+		2s 6+!c
+		2nt 8-9 zrównoważony
+	2s 5!h-5!c/!d
+	2nt 5!c-5!d
+end
+
+function db1nt()
+	(x)
+		pass forsuje do rekontry - chę grać 1ntxx lub ucieczka bez pięciokartu 
+			xx automat
+		xx 5+!c
+		2c 5+!d
+		2d 5+!h
+		2h 5+!s
+end
+
+function db1hs(pkt)
+	(1h)
+		x $(pkt)+4!h propozycja
+	(1s)
+		x $(pkt)+4!s propozycja
+end
+
+function obr_na_stare()
+	2h naturalne
+	2s naturalne
+	3c 16+ 6(5)+!c
+	3d 16+ 6(5)+!d
+	3h młode lepsze trefle
+	3s młode lepsze kara
+end
+
+function 1nt_fit(kol)
+	xx 10+ bez fitu lub 12+ 3+$(kol)
+	1nt 7-11 3+$(kol)
+	2c 7-10 5+!c
+	2d 7-10 5+!d
+	2$(kol) 0-6 3+$(kol)
+end
+
+function 1hx_tran()
+	xx 10+ bez fitu lub 12+ 3+!h
+	pass zawiera 7-9 zrównoważony
+	1s 4+!s
+	1nt 5+!c
+	2c 5+!d
+	2d 0-6 lub 10+ 3+!h
+	2h 7-9 3+!h
+end
+
+function 1sx_tran()
+	xx 10+ bez fitu lub 12+ 3!s
+	pass zawiera 7-9 zrównoważony
+	1nt 5+!c
+	2c 5+!d
+	2d 5+!h
+	2h 0-6 lub 10+ 3+!s
+	2s 7-9 3+!s
+end
+
+function resp_after_prec()
+	2h nieforsujące na !h
+	2s nieforsujące na !s
+	2nt 1) SO na !c 2) GF z dwukolorówką
+		3c automat
+			pass 1)
+			3d 5!d5!h
+			3h 5!s5!h
+			3s 5!s5!d
+	3c inwit do 3nt z fitem !c
+	3d inwit na dobrym kolorze
+	3h inwit na dobrym kolorze
+	3s inwit na dobrym kolorze
+	3nt do gry
+end
+
+function minor_x_2major()
+	2h 0-6, 6+!h
+	2s 0-6, 6+!s
+end
+
+1c 1) 12-14, zrównoważony 2) 12-14, 4!s4!h1!d4!c 3) 15+, 5+!c 4) 18+
+	1d 1) 0-6 2) 7-11, niezrównoważony na młodych 3) 16+ bez starszych czwórek
+		1h 1)12-14, 3-4!h 2)18+ 4+!h
+		1s 1)12-14, 3-4!s 2)18+ 4+!s
+		:1nt_resp(18-21)
+			2c 1)4-6 4!h/!s 2)0-6 4+5+!h!s
+				2d brak starszej czwórki
+				2h 4!h
+					2s GF, uzgodnienie !h
+					2nt inwit z 4!s
+					3c 5-6, 5+!c z 4!s
+					3d 5-6, 5+!d z 4!s
+					3h inwit z 4!h
+					3s splinter !s na kierach
+					3nt do gry z 4!s
+					4c splinter !c na kierach
+					4d splinter !d na kierach
+				2s 4!s bez 4!h
+					2nt inwit z 4!h
+					3c 5-6, 5+!c z 4!h
+					3d 5-6, 5+!d z 4!h
+					3h GF, uzgodnienie !s
+					3s inwit z 4!s
+					3nt do gry z 4!h
+					4c splinter !c na pikach
+					4d splinter !d na pikach
+					4h splinter !h na pikach
+			:2dhsnt_tran()
+			:3c_resp(4-6)
+			:3d_resp(4-6)
+			3h 543!s1!h
+			3s 543!h1!s
+			3nt do gry
+			:4c_Gerber()
+			4d transfer na 4!h
+			4h transfer na 4!s
+		2c 15+, 5+!c
+			pas większość negatów
+			2d 10+ GF
+			2h nturalne 0-6
+			2s nturalne 0-6
+			3c 4-9 3+!c
+			3d 7-9 5+!d
+		2d ACOL
+			2h ponowny negat 0-3
+			2s trasfer na 2Ba
+			2nt transfer na 6+!c intencje szlemikowe
+			3c transfer na 6+!d intencje szlemikowe
+			3d transfer na 6+!h intencje szlemikowe
+			3h transfer na 6+!s intencje szlemikowe
+		2h 18+, 5+!h
+		2s 18+, 5+!s
+		2nt 21-24, zrównoważony
+			3c Pupet
+				3d 4!h/!s, brak starszej piąki
+					3h 4!s, nie wyklucza 4!h
+					3s 4!h, wyklucza 4!s
+				3h 5!h332
+				3s 5!s332
+				3nt brak starszej czwórki
+			3d transfer 5+!h
+			3h transfer 5+!s
+			3s układ na kolorach młodszych
+			3nt 5!s4!h
+			4c naturalne
+			4d naturalne
+		3c 18+, 6+!c
+		3d 18+, 6+!d
+		(x) wywoławcza
+			pass 12-14, 3+!d
+			xx 18+, 3+!d
+			1h 1)12-14, 3-4!h 2)18+ 4+!h
+			1s 1)12-14, 3-4!s 2)18+ 4+!s
+			:1nt_resp(18-21)
+			2c 15+, 5+!c
+	:1h_resp()
+		1s 4+!s
+			2c 1)transfer na 2!d 2)dowolny ivit
+				2d automat
+			2d dowolny GF
+		:1nt_resp(12-14)
+			2c 1)transfer na 2!d 2)dowolny ivit
+				2d automat
+			2d dowolny GF
+		2c 15+, 5+!c
+			2d 10+ dowolny
+		:2d_odw(!h, !c, !s, 5+!h, 4+!h4!s)
+			2s 4+!h4!s
+			2nt 5!h niezrównoważony
+				3c pytanie o singla
+					3d singiel !d
+					3h singiel !c
+					3s singiel !s
+			3c 4!h-4+!c
+			3d 4!h-4+!d
+			3h 6+!h
+			3s 4!h333, transfer na 3Ba
+			3Ba 5!h332
+		2h 12-14, 3-4!h podniesienie amerykańskie
+			2s pytanie o skład
+				2nt 4!h
+				3c 5!c3!h32
+					3d można coś wymyślić
+					3h SO
+					:amer_after_h_next(GF ustalenie !d)
+				3d 3!h-4!d
+					3h SO
+					:amer_after_h_next(GF ustalenie !d)
+				3h 4!c3!h33
+					:amer_after_h_next(GF ustalenie !d)
+		2s 18+5+!s
+		(x)
+			xx fit 3+!h
+	:1s_resp()
+		:1nt_resp(12-14)
+			2c 1)transfer na 2!d 2)dowolny ivit
+				2d automat
+			2d dowolny GF
+		2c 15+, 5+!c
+			2d 10+ dowolny
+		:2d_odw(!s, !h, !c, 5!s4!h22, 5+!s)
+			2s 6+!s
+			2nt 5!s niezrównoważony
+				3c pytanie o singla
+					3d singiel !d
+					3h singiel !h
+					3s singiel !c
+			3c 4!s-4+!c
+			3d 4!s-4+!d
+			3h 5!s-4!h
+			3s 4!s333, transfer na 3Ba
+			3Ba 5!s332
+		2h 18+5+!h
+		2s 12-14, 3-4!s podniesienie amerykańskie
+			2nt pytanie o skład
+				3c 4!s
+				3d 3!s4!d
+					3h można coś wymyślić
+					3s SO
+					:amer_after_s_next(GF ustalenie !d)
+				3h 5!c3!s32
+					3s SO
+					:amer_after_s_next(GF ustalenie !d)
+				3s 4!c3!s33
+					:amer_after_s_next(GF ustalenie !d)
+		(x)
+			xx fit 3+!s
+	:1nt_resp(7-10)
+		2c 15+, 5+!c
+			2d naturalne 5!d332 dół
+			2h obawa o piki dół
+			2s obawa o kiery dół
+			2nt około 4333 dół
+			3c 7-8, 3-5!c
+			3d góra 5!d332
+			3h obawa o piki góra
+			3s obawa o kiery góra	
+			3nt około 4333 góra					
+	2c GF 5+!c
+		2d 12-14 skład dowolny
+	2d GF 5+!d
+		2h 12-14 skład dowolny
+	2h 7-9, 5!s4-5!h
+		pass do gry
+		2s do gry
+		2nt GF, pytanie o skład
+			3c 5!s4!h3-4!c
+				3d uzgodnienie !c
+				3h uzgodnienie !h
+				3s uzgodnienie !s
+				3nt do gry
+			3d 5!s4!h3-4!d
+				3h uzgodnienie !h
+				3s uzgodnienie !s
+				3nt do gry
+			3h 5!s4!h2!d2!c
+				3s uzgodnienie !s
+				3nt do gry
+				4c cuebid, uzgadniający !h
+				4d cuebid, uzgadniający !h
+			3s 5!s5!h2+!c
+				3nt do gry
+				4c uzgodnienie !h
+				4d uzgodnienie !s
+			3nt 5!s5!h2+!d
+				4c uzgodnienie !h
+				4d uzgodnienie !s
+		:3c_fit()
+		:3d_fit()
+		3h inwit
+		3s inwit
+		3nt do gry
+		4c 4+!h0-1!s
+		4d 3+!s0-1!h
+	2s inwit+ transfer na Ba
+		2nt dół otwarcia 12-14
+		3c 15+ 5+!c
+		3d 18+ 5+!d
+		3h 18+ 5+!h
+		3s 18+ 5+!s
+		3nt góra otwarcia 12-14
+		:4c_Gerber()
+		4nt inwit
+	2nt inwit 10-12
+	:3c_resp(9-11)
+		:3d_fit()
+		:3h_fit()
+		:3s_fit()
+		3nt do gry
+		4c 18+ uzgodnienie !c
+	:3d_resp(9-11)
+		:3h_fit()
+		:3s_fit()
+		3nt do gry
+		4c 18+ na !c
+			4d 0-1!c
+			4h cubid na !c
+			4s cubid na !c
+			4nt lepsze niż 5!c  wszystkie figury w młodych
+			5c 2+!c do gry
+		4d 18+ uzgodnienie !d
+	(1d)
+		x 4+!h4+!s
+		:1h_resp()
+			2h 4!h lub 3!h bez trzymania !d
+				2s pytanie o skład
+					2nt 4!h
+					3c 5!c3!h32
+						3d można coś wymyślić
+						3h SO
+						:amer_after_h_next(uzgodnienie !h  krótkość !d)
+					3d 3!h-4!d blotki
+						3h SO
+						:amer_after_h_next(uzgodnienie !h  krótkość !d)
+					3h 4!c3!h33
+						:amer_after_h_next(uzgodnienie !h  krótkość !d)
+		:1s_resp()
+			2s 4!s lub 3!s bez trzymania !d
+				2nt pytanie o skład
+					3c 4!s
+					3d 3!s5!c
+						3h można coś wymyślić
+						3s SO
+						:amer_after_s_next(uzgodnienie !s  krótkość !d)
+					3h 3!s4!h
+						3s SO
+						:amer_after_s_next(uzgodnienie !s  krótkość !d)
+					3s 4!c3!s33
+						:amer_after_s_next(uzgodnienie !s  krótkość !d)
+		:minor_x_2major()
+	(1h)
+		x bez 4 pików
+	(1ba)
+		2c 4+4+!h!s
+	(x)
+		xx 10+
+		pass 0-6 3+!c
+		1d 0-6 bez 3!c
+		1h 7+ 4+!h dalsza licytacja jak bez kontry
+		1s 7+ 4+!s dalsza licytacja jak bez kontry
+		:1nt_resp(7-9)
+		2c 7-9 5+c
+		2d 7-9 5+d
+		:minor_x_2major()
+1d 1) 12-17, 5+!d 2) 12-17, trójkolorówka 3) 12-14, 5!c4+!d
+	:1h_resp()
+		1s 4+!s
+			2c 1)transfer na 2!d 2)dowolny ivit
+				2d automat
+			2d dowolny GF
+		:1nt_resp(12-14)
+			2c 1)transfer na 2!d 2)dowolny ivit
+				2d automat
+			2d dowolny GF
+		2c 1)12-14 5-4+!c!d 2)15-17 5!d4!c
+			2s GF czwarty kolor
+		2d 12-14 6+!d
+		2h 12-14, 3-4!h podniesienie amerykańskie
+			2s pytanie o skład
+				2nt 4!h
+				3c 5-4+!c!d3!h
+					3d można coś wymyślić
+					3h SO
+					:amer_after_h_next(GF ustalenie !d)
+				3d 6+!d3!h
+					3h SO
+					:amer_after_h_next(GF ustalenie !d)
+				3h 5!d3!h32
+					:amer_after_h_next(GF ustalenie !d)
+		2s 15-17 6+!d3!h
+		2nt 15-17 6+!d z trzymaniem !c i !s
+		3c 15-17, 5+!d5+!c
+		3d 15-17 6+!d bez trzymania obydwu !c i !s
+	:1s_resp()
+		:1nt_resp(12-14)
+			2c 1)transfer na 2!d 2)dowolny ivit
+				2d automat
+			2d dowolny GF
+		2c 1)12-14 5-4+!c!d 2)15-17 5!d4!c
+			2h GF czwarty kolor
+		2d 12-14 6+!d
+		2h 15-17, 4!h
+		2s 12-14, 3-4!s podniesienie amerykańskie
+			2nt pytanie o skład
+				3c 4!s
+				3d 6+!d3!s
+					3h można coś wymyślić
+					3s SO
+					:amer_after_s_next(GF ustalenie !d)
+				3h 5-4+!c!d3!s
+					3s SO
+					:amer_after_s_next(GF ustalenie !d)
+				3s 5!d3!s32
+					:amer_after_s_next(GF ustalenie !d)
+		2nt 15-17 6+!d z trzymaniem !c i !h
+		3c 15-17, 5+!d5+!c
+		3d 15-17 6+!d bez trzymania obydwu !c i !h
+	:1nt_resp(7-10)
+		2c 1)12-14 5-4+!c!d 2)15-17 5!d4!c
+		2d 12-14 6+!d
+		2h 15-17, 4!h
+		2s 15-17, 4!s
+		2nt 15-17 6+!d
+		3c 15-17, 5+!d5+!c
+	2c GF 5+!c/dowolny
+		2h 12-14 skład dowolny
+	2d GF 4+!d
+		2h 12-14 skład dowolny
+	2h 7-9, 5!s4-5!h
+		pass do gry
+		2s do gry
+		2nt 1) 12-14, 5+!c5+!d 2) 12-14, 6+!d
+			pass do gry
+			3c niechęć gry NT, brak 3!d
+			3d 3+!d
+		3c 15-17, 5+!c5+!d
+		3d 15-17, 6+!d
+		3h inwit
+		3s inwit
+		3nt do gry
+		4c 4+!h0-1!s
+		4d 3+!s0-1!h
+	2s inwit+ transfer na Ba
+	2nt inwit 10-12
+	:3c_resp(9-11)
+	(1ba)
+		2c 4+4+!h!s
+	(x)
+		xx 10+
+		:minor_x_2major()
+1h 1) 12-17, 5+!h 2) 8-11 5+!h5+!c/!d
+	:1s_resp()
+		:1nt_resp(12-14)
+			2c 1)transfer na 2!d 2)dowolny ivit
+				2d automat
+			2d dowolny GF
+		2c 1) 12-14, 4+!c 2) 15-17, 4!c 3) 7-11, 5+!c
+			2d czwarty kolor inwit
+		2d 1) 12-14, 4+!d 2) 15-17, 4!d 3) 7-11, 5+!d
+		:1h_some_resp(12-14; 6+!h, 12-14; 4!s, 5332, 15-17; 5+!d, 5)
+		3s 15-17, 4!s
+	:1nt_resp(7-11)
+		2c 1) 12-14, 4+!c 2) 15-17, 4!c 3) 7-11, 5+!c
+		2d 1) 12-14, 4+!d 2) 15-17, 4!d 3) 7-11, 5+!d
+		:1h_some_resp(12-14; 6+!h, 15-17; 4!s, 5332, 15-17; 5+!d, 5)
+	2c GF, 5+!c/dowolny
+		2d 1) 12-14, 4+!d 2) 15-17, 4!d 3) 7-11, 5+!d
+		:1h_some_resp(pozostałe, 15-17; 4!s, 5332, 15-17; 5+!d, 4)
+	2d GF, 5+!d
+		:1h_some_resp(pozostałe, 15-17; 4!s, 5332 lub 5!h4!c, 12-14 3+!d, 5)
+	2h 7-9, 3+!h
+	2s inwit z singlem 4+!h
+		2nt pytanie o singla
+			3c singiel !c
+			3d singiel !d
+			3h singiel !s
+	2nt inwit 10-11, 3+!h
+	:3c_resp(9-11)
+	:3d_resp(9-11)
+	3h blokujące
+	3s 10-12, 4+!h, krótkość - minisplinter
+		3nt pytanie o singla
+			4c singiel !c
+			4d singiel !d
+			4h singiel !s
+	3nt splinter !s
+	4c splinter !c
+	4d splinter !d
+	4h blokujące
+	(x)
+		:1nt_fit(h)
+1s 1) 12-17, 5+!s 2) 8-11 5+!s5+!c/!d
+	1nt 7-11 bez fitu !s
+		:gazilli_1s()
+		2d 1) 12-14, 4+!d 2) 15-17, 4!d 3) 7-11 5+!d
+		2h 12-14, 4+!h
+		2s 12-14, 6+!s
+		2nt 15-17, 5332
+		3c 15-17, 5+!c
+		3d 15-17, 5+!d
+		3h 15-17, 5+!h
+		3s 15-17, 6+!s
+	2c GF 5+!c/dowolny
+		2d 1) 12-14, 4+!d 2) 15-17, 4!d 3) 7-11 5+!d
+		:1s_some_resp(pozostałe, 15-17; 5+!d, 5332, 4)
+	2d GF 5+!d
+		:1s_some_resp(pozostałe, 12-14 3+!d, 5332 lub 5!s4!c, 5)
+	2h GF 5+!h
+		2s pozostałe
+		2nt 15-17, 5332 lub 5!s4!c lub 5!s4!d
+		3c 15-17, 5+!c
+		3d 15-17, 5+!d
+		3h 12-14, 3+!h
+		3s 15-17, 6+!s
+	2s 7-9 3+!s
+	2nt inwit z singlem 4+!s
+		3c pytanie o singla
+			3d singiel !d
+			3h singiel !h
+			3s singiel !c
+	:3c_resp(9-11)
+	:3d_resp(9-11)
+	3h inwit 10-11, 3+!s
+	3s blokujące
+	3nt 10-12, 4+!s, krótkość - minisplinter
+		4c pytanie o singla
+			4d singiel !d
+			4h singiel !h
+			4s singiel !c
+	4c splinter !c
+	4d splinter !d
+	4h splinter !h
+	4s blokujące
+	(x)
+		:1nt_fit(s)
+1nt 15-17, zrównoważony
+	2c 1) 8+ 4!h/!s 2) 0-7 4+5+!h!s
+		2d brak starszej czwórki
+			2h PRZED PASEM: 0-7, 5-4 na starszych | PO PASIE: SO 5!h4!s
+			2s PRZED PASEM: 8-9, inwit na 5!s-4!h | PO PASIE: SO 5!s4!h
+			2nt inwit
+			3c GF, 5+!c
+			3d GF, 5+!d
+			3h GF, 4!h-5!s
+			3s GF, 4!s-5!h
+		2h 4!h
+			2s GF, uzgodnienie !h
+			2nt inwit z 4!s
+			3c GF, 5+!c
+			3d GF, 5+!d
+			3h inwit z 4!h
+			3s splinter !s na kierach
+			3nt do gry z 4!s
+			4c splinter !c na kierach
+			4d splinter !d na kierach
+		2s 4!s bez 4!h
+			2nt inwit z 4!h
+			3c GF, 5+!c
+			3d GF, 5+!d
+			3h GF, uzgodnienie !s
+			3s inwit z 4!s
+			3nt do gry z 4!h
+			4c splinter !c na pikach
+			4d splinter !d na pikach
+			4h splinter !h na pikach
+		(x) wistowa
+			pass bez trzymania trefl
+				xx powtórny stayman (8+)
+					2d brak starszej czwórki i bez zatrzymania trefl
+						2h 4!h bez trzymania trefl
+							pass 3!h
+							2s 3!s2!h
+								pass 4!s
+								2nt Może zjedzie tylko 5 trefli, na 6 atutach i tak nie będziemy grali
+						2s 4!s bez !h bez trzymania trefl
+							pass 3!s
+							2nt Może zjedzie tylko 5 trefli, na 6 atutach i tak nie będziemy grali
+						2nt 8-9 trzymanie trefl
+					2h 4!h bez trzymania trefl
+						2s 4!s bez trzymania trefl
+						2nt 4!s trzymanie trefl
+					2s 4!s bez 4!h bez trzymania trefl
+						pass 3!s bez trzymania trefl
+						2nt brak lepszej zapowiedzi
+				2d 5!d 4!h/!s słabe
+				2h 5!h4!s słabe
+				2s 5!s4!h słabe
+			xx to mój kolor, propozycja gry
+			2d brak starszych czwórek, trzymanie trefl
+			2h 4!h trzymanie trefl
+			2s 4!s bez 4!h trzymanie trefl
+	:2dhsnt_tran()
+	:3c_resp(8-9)
+	:3d_resp(8-9)
+	3h 543!s1!h
+	3s 543!h1!s
+	3nt do gry
+	:4c_Gerber()
+	4d transfer na 4!h
+	4h transfer na 4!s
+	4s ja lepiej rozgrywam piki??
+	4nt inwit 16-18
+		5c przyjęcie inwitu 4!c
+		5d przyjęcie inwitu 4!d
+		5h przyjęcie inwitu 4!c4!d trefle lepsze
+		5s przyjęcie inwitu 4!c4!d kara lepsze
+		5nt przyjęcie inwitu, pokaż młodszą piątkę
+			6c 5!c
+			6d 5!d
+			6nt nie przyszła
+		6c przyjęcie inwitu 5!c
+		6d przyjęcie inwitu 5!d
+		6h przyjęcie inwitu 5!h
+		6s przyjęcie inwitu 5!s
+		6nt przyjęcie inwitu, nie chcę grać w kolor
+	:db1nt()
+	:1nt_defence()
+2c 11-14, 1) 6+!c 2) 5+!c4!h/!s
+	2d relay, siła co najmniej inwitująca
+		2h 4!h
+			2s dalsze pytanie
+				2nt 5!c4!h2!s2!d
+					3c F1, ustalenie !c, można się jeszcze zatrzymać w 4!c
+					3d GF na !d, ustalenie !d
+					3h GF na !h, ustalenie !h
+					3s GF na !s, ustalenie !s
+					3nt do gry
+					4c GF na !c, ustalenie !c
+					4h do gry
+					4s do gry
+				3c 6+!c4!h
+					3d dalsze pytanie
+						3h 6!c4!h0!s3!d
+							3s GF na !h, ustalenie !h
+							3nt do gry
+							4c GF na !c, ustalenie !c
+							4d GF na !d, ustalenie !d
+							4h do gry
+							4s do gry
+						3s 6!c4!h3!s0!d
+							3nt do gry
+							4c GF na !c, ustalenie !c
+							4d GF na !h, ustalenie !h
+							4h do gry
+							4s do gry
+							4nt pytanie o asy na !s, ustalenie !s
+						3nt 6!c4!h21
+							4c GF na !c, ustalenie !c
+							4d GF na !h, ustalenie !h
+							4h do gry
+							4s do gry
+							4nt pytanie o asy na !s, ustalenie !s
+						4c 7+!c, ustalenie !c
+					3h GF na !h, ustalenie !h
+					3s GF na !s, ustalenie !s
+					3nt do gry
+					4c GF na !c, ustalenie !c
+					4d GF na !d, ustalenie !d
+					4h do gry
+					4s do gry
+				3d 5!c4!h3!d1!s
+					3h GF na !h, ustalenie !h
+					3s GF na !s, ustalenie !s
+					3nt do gry
+					4c GF na !c, ustalenie !c
+					4d GF na !d, ustalenie !d
+					4h do gry
+					4s do gry
+				3h 5!c4!h4!s
+					3s GF na !s, ustalenie !s
+					3nt do gry
+					4c GF na !c, ustalenie !c
+					4d GF na !h, ustalenie !h
+					4h do gry
+					4s do gry
+				3s 5!c4!h3!s1!d
+					3nt do gry
+					4c GF na !c, ustalenie !c
+					4d GF na !h, ustalenie !h
+					4h do gry
+					4s do gry
+					4nt pytanie o asy na !s, ustalenie !s
+			2nt naturalne, nieforsujące
+			3c naturalne, nieforsujące
+			3d GF na !d, ustalenie !d
+			3h inwit do 4!h
+			3s GF na !s, ustalenie !s
+			3nt do gry
+			4c inwit do 5!c
+			4d splinter na !h
+			4h do gry
+		2s 4!s
+			2nt dalsze pytanie
+				3c 6+!c4!s
+					3d dalsze pytanie
+						3h 6!c4!s3!h0!d
+							3s GF na !s, ustalenie !s
+							3nt do gry
+							4c GF na !c, ustalenie !c
+							4d GF na !h, ustalenie !h
+							4h do gry
+							4s do gry
+						3s 6!c4!s3!d0!h
+							3nt do gry
+							4c GF na !c, ustalenie !c
+							4d GF na !d, ustalenie !d
+							4h do gry
+							4s do gry
+							4nt pytanie o asy na !s, ustalenie !s
+						3nt 6!c4!s21
+							4c GF na !c, ustalenie !c
+							4d GF na !d, ustalenie !d
+							4h do gry
+							4s do gry
+							4nt pytanie o asy na !s, ustalenie !s
+						4c 7+!c, ustalenie !c
+					3h GF na !h, ustalenie !h
+					3s GF na !s, ustalenie !s
+					3nt do gry
+					4c GF na !c, ustalenie !c
+					4d GF na !d, ustalenie !d
+				3d 5!c4!s3!d1!h
+					3h GF na !h, ustalenie !h
+					3s GF na !s, ustalenie !s
+					3nt do gry
+					4c GF na !c, ustalenie !c
+					4d GF na !d, ustalenie !d
+					4h do gry
+					4s do gry
+				3h 5!c4!s3!h1!d
+					3s GF na !s, ustalenie !s
+					3nt do gry
+					4c GF na !c, ustalenie !c
+					4d GF na !h, ustalenie !h
+					4h do gry
+					4s do gry
+				3s 5!c4!s2!h2!d
+					3nt do gry
+					4c GF na !c, ustalenie !c
+					4d GF na !d, ustalenie !d
+					4h do gry
+					4s do gry
+					4nt pytanie o asy na !s, ustalenie !s
+			3c naturalne, nieforsujące
+			3d GF na !d, ustalenie !d
+			3h GF na !h, ustalenie !h
+			3s inwit do 4!s
+			3nt do gry
+			4c inwit do 5!c
+			4d splinter !d, ustalający !s
+			4h splinter !h, ustalający !s
+			4s do gry
+		2nt 6+!c bez singla
+			3c naturalne, nieforsujące
+			3d dalsze pytanie
+				3h 6!c3!h2!s2!d
+					3s GF na !s, ustalenie !s
+					3nt do gry
+					4c GF na !c, ustalenie !c
+					4d GF na !d, ustalenie !d
+					4h do gry
+					4s do gry
+					4nt pytanie o asy na !h, ustalenie !h
+				3s 6!c3!s2!h2!d
+					3nt
+					4c GF na !c, ustalenie !c
+					4d GF na !d, ustalenie !d
+					4h do gry
+					4s do gry
+					4nt pytanie o asy na !s, ustalenie !s
+				3nt 6!c3!d2!s2!h
+					4c GF na !c, ustalenie !c
+					4d GF na !d, ustalenie !d
+					4h do gry
+					4s do gry
+					4nt pytanie o asy na !s, ustalenie !s
+				4c 7!c2!d2!s2!h, ustalenie !c 
+			3h GF na !h, ustalenie !h
+			3s GF na !s, ustalenie !s
+			3nt do gry
+			4c inwit do 5!c
+			4d GF na !d, ustalenie !d
+		3c 6+!c z singlem
+			3d pytanie o singla!!!
+				3h 6!c3-4!d2-3!s1!h
+					3s GF na !s, ustalenie !s
+					3nt do gry
+					4c GF na !c, ustalenie !c
+					4d GF na !d, ustalenie !d
+					4h do gry
+					4s do gry
+				3s 6!c3-4!d2-3!h1!s
+					3nt do gry
+					4c GF na !c, ustalenie !c
+					4d GF na !d, ustalenie !d
+					4h do gry
+					4s do gry
+					4nt pytanie o asy na !h, ustalenie !h
+				3nt 6!c3!h3!s1!d
+					4c GF na !c, ustalenie !c
+					4d GF na !h, ustalenie !h
+					4h do gry
+					4s do gry
+					4nt pytanie o asy na !s, ustalenie !s
+				4c 7!c, ustalenie !c
+			3h GF na !h, ustalenie !h
+			3s GF na !s, ustalenie !s
+			3nt do gry
+			4c inwit do 5!c
+	:resp_after_prec()
+	(x) wywoławcza
+		xx relay, siła co najmniej na inwit
+		2d nieforsujące na !d
+		:resp_after_prec()
+2d 5+4+!h!s 4-11
+	2h do gry
+	2s do gry
+	2nt pytanie o skład
+		3c 5!h-4!s
+			:major_agree()
+		3d 5!s-4!h
+			:major_agree()
+		3h 6!h-4!s
+			3s szlemikowe uzgodnienie !s
+			3nt do gry
+			4c cuebid !c, uzgodnienie !h
+			4d cuebid !d, uzgodnienie !h
+			:major_to_play()
+		3s 6!s-4!h
+			3nt szlemikowe uzgodnienie !h
+			4c cuebid !c, uzgodnienie !s
+			4d cuebid !d, uzgodnienie !s
+			:major_to_play()
+		3nt 5!h-5!s (6-6)
+			4c uzgodnienie !h sprawdzam krótkość
+				4d krótkość !d
+				4h krótkość !c
+				4s cubid w !c i !d
+				4nt 6!h-6!s
+				5c renons !c
+				5d renons !d
+			4d uzgodnienie !s sprawdzam krótkość
+				4h krótkość !c
+				4s krótkość !d
+				4nt 6!h-6!s
+				5c renons !c
+				5d renons !d
+			:major_to_play()
+		4c 6!h-5!s
+		4d 6!s-5!h
+		4h 6!h-5!s góra nie chciałem 1!s
+	:3c_fit()
+	:3d_fit()
+	3nt do gry
+	4c pokaż dłuższy kolor transferem
+	4d zalicytuj dłuższy kolor
+	:major_to_play()
+	(x)
+		Pass Propozycja gry naturalne kara
+		XX Pokaż własny kolor
+2h 5-11 6+!h
+	2s pytanie o singla
+		2ba singiel !s
+		3c singiel !c
+		3d singiel !d
+		3h bez singla
+	2nt pytanie o fit w !s
+		3c 0-1!s
+		3d dwie blotki !s
+		3h trzy blotki !s lub druga figura !s
+		3s trzecia figura !s
+	:3c_fit()
+	:3d_fit()
+2s 5-11 6+!s
+	2nt pytanie o singla
+		3c singiel !c
+		3d singiel !d
+		3h singiel !h
+		3s bez singla
+	:3c_fit()
+	:3d_fit()
+	:3h_fit()
+2nt 5-11 5!c-5!d
+	3h pytanie o układ
+		3s 2!s
+		3nt 2!h
+		4c 6!c
+		4d 6!d
+		4h 3!h
+		4s 3!s
+3c 5-11 blokujące 6+!c
+	:3d_fit()
+	:3h_fit()
+	:3s_fit()
+3d 5-11 blokujące 6+!d
+	:3h_fit()
+	:3s_fit()
+3h 5-11 blokujące 7+!h
+3s 5-11 blokujące 7+!s
+3nt 7+!c/!d AKDWxxx bez dojścia
+	4c do koloru
+	4d pytanie o singla
+		4h singiel !h
+		4s singiel !s
+		4nt singiel !c/!d
+	5c do koloru
+4c 5-11 blokujące 8+!c
+4d 5-11 blokujące 8+!d
+pass 11-
+	1h 10-17, 5+!h
+		:drury(h)
+		(x)
+			:1nt_fit(h)
+	1s 10-17, 5+!s
+		:drury(s)
+		(x)
+			:1nt_fit(s)
+	:r_blok(2h)
+	:r_blok(2s)
+	:r_blok(3c)
+	:r_blok(3d)
+	(1c)
+		x - kontra bi 5(4)+!c/!d 4+!h/!s lub objaśniająca
+			:db1hs(7)
+		1d wistowe 8-17 5(4)+!d może zawierać 4!h/!s
+		1h wistowe 8-17 5(4)+!h
+			:drury(h)
+			(x)
+				xx 10-11 bez fitu
+				1nt 7-9 bez fitu
+				2h 0-9 3+!h
+				2s 7-11 4+!h karta na 2,5h
+				2nt 9-11 3+!h bilansowe do 3h
+		1s wistowe 8-17 5(4)+!s
+			:drury(s)
+			(x)
+				xx 10-11 bez fitu
+				1nt 7-9 bez fitu
+				2s 0-9 3+!s
+				2nt 9-11 3+!s bilansowe do 3s
+		2c wistowe 10-17 5+!c może zawierać 4!h/!s
+			2d pytanie 
+				2h 4!h
+				2s 4!s
+				2nt 12-14 5!c
+				3c 6!c
+		2d 5+4+!h!s
+	(1d)
+		x - kontra bi 5(4)+!c 4+!h/!s
+			:db1hs(7)
+		1h wistowe 8-17 5(4)+!h
+			:drury(h)
+			(x)
+				xx 10-11 bez fitu
+				1nt 7-9 bez fitu
+				2h 0-9 3+!h
+				2s 7-11 4+!h karta na 2,5h
+				2nt 9-11 3+!h bilansowe do 3h
+		1s wistowe 8-17 5(4)+!s
+			:drury(s)
+			(x)
+				xx 10-11 bez fitu
+				1nt 7-9 bez fitu
+				2s 0-9 3+!s
+				2nt 9-11 3+!s bilansowe do 3s
+		2c wistowe 10-17 5+!c może zawierać 4+!h/!s
+		2d 5+4+!h!s
+	(1h)
+		x - kontra bi 5(4)+!c/!d 4+!s
+			(1s)
+				x 7+4!s propozycja 
+		:1h_wej(14)
+	(1s)
+		x - kontra bi 5(4)+!c/!d 4+!h
+		:1s_wej(14)
+
+	(1nt)
+		x 5+!c/!d-4!h/!s
+		2c 5+4+!h!s
+		2d 6+!h/!s
+		2h 5+!h 4+!c/!d
+		2s 5+!s 4+!c/!d
+		2nt 5!c-5!d
+	(2c) Precision
+		pass
+			(2d) pytanie
+				x kara
+		x wywoławcza
+			(2d) pytanie
+				x kara lub chcę kontrować karnie
+			({2!d}) naturalne
+				x wywoławcza
+		4c GF 5!h-5!s
+		4d GF 5!d-5!h/!s
+	({2!c}) stare 4+4+!h!s
+		x  trefle lub wywoławcza trefle z karami
+		2d naturalne 12+, 5+!d
+		:obr_na_stare()
+	(2d) 6+!h/!s lub Wilkosz
+		pass nic ciekawego +lub wywołanie do kierów 12+, 4+!s
+		x 12+, 4+!h wywoławcza do pików lub 18+
+		4c GF 5!c-5!h/!s
+		4d GF 5!d-5!h/!s
+	({2!d}) 54!h!s
+		x kara lub wywoławcza trefle z karami
+		:obr_na_stare()
+	(2h) 6+!h lub 5!h-5
+		4c GF 5!c-5!s
+		4d GF 5!d-5!s
+	(2s) 6+!s lub 5!s-5
+		4c GF 5!c-5!h
+		4d GF 5!d-5!h
+	(2nt) 5!c-5!d
+		3c lepsze kiery od pików min.5-4
+		3d lepsze piki od kierów min.5-4
+	(3c) 6+!c
+		4c GF 5!h-5!s
+		4d GF 5!d-5!h/!s
+	(3d) 6+!d
+		4c GF 5!c-5!h/!s
+		4d GF 5!h-5!s
 {dwustronna przed pasem partnera}
 	(1c)
+		p 11-
+			(1d)
+				x dowolne dwa kolory
+				2d naturalne
+		x wywoławcza
+			(pass) nagat raczej z treflami
+				pass 10+ 5+!c w niekożystnych moźna wybrać 3c
+				1d negat 0-7 lub 7-9, kara lub młodsze
+				1h 7+ 4+!h dalsza licytacja jak po naszym otwarciu trefl
+				1s 7+ 4+!s dalsza licytacja jak po naszym otwarciu trefl
+				1nt 7-10, zrównoważony możliwe 5!c/!d
+				2c spodziewam się że uciekną 7-11 5+!c
+				2d 9-11 5+!d
+				2h 7-9 6(5)+!h
+				2s 7-9 6(5)+!s
+				3c GF 5+!c
+				3d GF 5+!d
+			(1d) negat bez trefli lub zwykły
+				pass negat 0-7 lub 7-9 trefle lub młodsze
+				x karna 7+, 5+!d może zagramy coś z kontrą
+				1h 7+ 4+!h dalsza licytacja jak po naszym otwarciu trefl
+				1s 7+ 4+!s dalsza licytacja jak po naszym otwarciu trefl
+				1nt 7-10, zrównoważony możliwe 5!c/!d
+				2c 9-11 5+!c
+				2d spodziewam się że uciekną 7-9 5+!d
+				2h 7-9 6(5)+!h
+				2s 7-9 6(5)+!s
+				3c GF 5+!c
+				3d GF 5+!d
+		1d 5+!d, 8+
 		:wej_kier(5+!d 12+ F1, 6+!d inwit do 3nt)
 		:wej_pik(5+!d 12+ F1, 5+!h 12+ F1, 6+!d inwit do 3nt, 6+!h inwit)
+		1nt 15-17, zrównoważony
+			:db1nt()			
 	(1d)
 		:wej_kier(GF bez fitu; pytanie o trzymanie, chcę grać 3!h)
 		:wej_pik(GF bez fitu; pytanie o trzymanie, 5+!h 12+ F1, chcę grać 3!s, 6+!h inwit)
+		1nt 14-17, zrównoważony, trzymanie !d
+			(x)
+				xx 5+!c
+				2c 4!c-4
+				2d 5+!h
+				2h 5+!s
 	(1h)
-		:wej_pik(5+!d 12+ F1, GF bez fitu; pytanie o trzymanie, 6+!d inwit do 3nt, chcę grać 3!s)
-
+		x 10+ 4+!s 3+!c 3+!d
+		:1h_wej(14)
+	(1s)
+		x 10+ 4+!h 3+!c 3+!d
+		:1s_wej(14)
+	(1nt)
+		x 5+!c/!d-4!h/!s
+		2c 5+4+!h!s
+		2d 6+!h/!s
+		2h 5+!h 4+!c/!d
+		2s 5+!s 4+!c/!d
+		2nt 5!c-5!d
+		pass nic ciekawego
+			x 14+
+			2c 5+4+!h!s
+			2d 12+, 5+!d
+			2h 12+, 5+!h
+			2s 12+, 5+!s
+	(2c) Precision
+		pass
+			(2d) pytanie
+				x kara lub objaśniająca
+		x wywoławcza
+			(2d) pytanie
+				x kara lub chcę kontrować karnie
+			({2!d}) naturalne
+				x wywoławcza
+		4c GF 5!h-5!s
+		4d GF 5!d-5!h/!s
+	({2!c}) stare 4+4+!h!s
+		x  trefle lub wywoławcza trefle z karami
+		2d naturalne 12+, 5+!d
+		:obr_na_stare()
+	(2d) 6+!h/!s lub Wilkosz
+		pass nic ciekawego +lub wywołanie do kierów 12+, 4+!s
+		x 12+, 4+!h wywoławcza do pików lub 18+
+			(2h)
+				x 4+!h karna
+			(2s)
+				pass może być wyczekujący na wznówkę  
+				x kontra odpowiedź coś w młodszych i raczej 3!h
+				2nt około 9pc i zatrzymanie !s
+		2nt 16-18, zrównoważony
+			3c Stayman
+				3d brak starszej czwórki
+				3h 4!h
+				3s 4!s
+			3d transfer 5+!h
+			3h transfer 5+!s
+			3s układ na kolorach młodszych
+			3nt do gry
+			4c naturalne, intencje szlemikowe
+			4d naturalne, intencje szlemikowe
+		4c GF 5!c-5!h/!s
+		4d GF 5!d-5!h/!s
+	({2!d}) 54!h!s
+		x kara lub wywoławcza trefle z karami
+		:obr_na_stare()
+	(2h) 6+!h lub 5!h-5
+		4c GF 5!c-5!s
+		4d GF 5!d-5!s
+	(2s) 6+!s lub 5!s-5
+		4c GF 5!c-5!h
+		4d GF 5!d-5!h
+	(2nt) 5!c-5!d
+		3c lepsze kiery od pików min.5-4
+		3d lepsze piki od kierów min.5-4
+	(3c) 6+!c
+		4c GF 5!h-5!s
+		4d GF 5!d-5!h/!s
+	(3d) 6+!d
+		4c GF 5!c-5!h/!s
+		4d GF 5!h-5!s
